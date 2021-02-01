@@ -61,7 +61,7 @@ export default {
     },
     getPm2List () {
       this.loading = true
-      axios.get('http://localhost:3002/process-list').then(({ data: { data } }) => {
+      axios.get('/process-list').then(({ data: { data } }) => {
         this.tableData = (data || []).map(item => {
           return {
             pid: item.pid,
@@ -79,7 +79,7 @@ export default {
     },
     restartProcess (name) {
       this.loading = true
-      axios.post('http://localhost:3002/restart-process-name', qs.stringify({
+      axios.post('/restart-process-name', qs.stringify({
         name
       })).then(res => {
         this.$message.success('重启成功')
@@ -88,7 +88,7 @@ export default {
     },
     stopProcess (name) {
       this.loading = true
-      axios.post('http://localhost:3002/stop-process-name', qs.stringify({
+      axios.post('/stop-process-name', qs.stringify({
         name
       })).then(res => {
         this.$message.success('停止成功')
@@ -97,7 +97,7 @@ export default {
     },
     deleteProcess (name) {
       this.loading = true
-      axios.post('http://localhost:3002/delete-process-name', qs.stringify({
+      axios.post('/delete-process-name', qs.stringify({
         name
       })).then(res => {
         this.$message.success('删除成功')
