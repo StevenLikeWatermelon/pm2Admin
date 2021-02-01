@@ -17,6 +17,7 @@
           </template>
         </el-table-column>
         <el-table-column prop="restartTime" label="重启次数"> </el-table-column>
+        <el-table-column prop="port" label="服务端口号"> </el-table-column>
         <el-table-column prop="watch" label="watch"> </el-table-column>
         <el-table-column label="操作" width="600">
           <template slot-scope="{row}">
@@ -67,6 +68,7 @@ export default {
             pid: item.pid,
             name: item.name,
             status: item.pm2_env?.status,
+            port: item.pm2_env?.args[0],
             restartTime: item.pm2_env?.restart_time,
             watch: `${item.pm2_env?.watch}`,
             cpu: `${item.monit?.cpu}`,
