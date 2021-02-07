@@ -68,7 +68,7 @@ export default {
             pid: item.pid,
             name: item.name,
             status: item.pm2_env?.status,
-            port: item.pm2_env?.args[0],
+            port: item.pm2_env?.args ? item.pm2_env.args[0] : '暂无端口',
             restartTime: item.pm2_env?.restart_time,
             watch: `${item.pm2_env?.watch}`,
             cpu: `${item.monit?.cpu}`,
