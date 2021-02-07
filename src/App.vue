@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="title">
-      <span>前端中台项目运维平台</span>
+      <span>前端中台项目运维后台</span>
     </div>
     <div class="content-global">
       <el-button type="primary" :loading="loading" @click="viewLogs">查看运行日志</el-button>
