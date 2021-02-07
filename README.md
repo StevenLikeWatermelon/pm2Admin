@@ -1,24 +1,9 @@
-# pm2admin
+# 基于pm2的一套后台服务管理系统。可以快速起停服务。以及完善的日志查看功能。 
 
-## Project setup
+## 启动后台服务 需预置pm2
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+pm2 start server.sh
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 效果展示
+![首页](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/pm2-manage.png)
